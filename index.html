@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Richterskala | Home</title>
+  <script src="/assets/builds/bundle.css.js"></script></head>
+<body data-module="Generals">
+
+<script>
+  const breakpointKeys = {
+    xlarge: 'XLARGE',
+    large: 'LARGE',
+    medium: 'MEDIUM',
+    small: 'SMALL',
+  };
+
+  window.config = {};
+  window.config = {
+    breakpoints: [
+      {
+        name: breakpointKeys.small,
+        width: 700,
+      },
+      {
+        name: breakpointKeys.medium,
+        width: 1000,
+      },
+      {
+        name: breakpointKeys.large,
+        width: 1440,
+      },
+      {
+        name: breakpointKeys.xlarge,
+        width: 3000,
+      },
+    ],
+    breakpointKeys: breakpointKeys,
+  };
+
+  window.config.events = {
+    resize: 'event-resize',
+    viewportChange: 'event-viewport-changed',
+    viewportChangeStage: 'event-viewport-changed-stage',
+    viewportScroll: 'event-scroll',
+  }
+
+  window.config.generals = {
+    scrollConfig: {
+      offset: 0,
+      ease: 'out-cube',
+      duration: 1000,
+    },
+    site: {
+      title: 'Richterskala',
+    }
+  }
+</script>
+<main class="main" role="content">
+  <section class="mod--content-overview grid" data-module="ContentOverview">
+  </section>
+</main>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138300476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138300476-1');
+</script>
+
+
+<aside class="mod--aside" data-module="AsideText"></aside>  <script src="/assets/builds/bundle.js"></script>  </body>
+</html>
