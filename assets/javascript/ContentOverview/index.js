@@ -19,7 +19,7 @@ class ContentOverview {
   }
 
   fetchContentFromApi() {
-    fetch('api')
+    fetch('api/index.json')
       .then(res => res.json())
       .then((data) => {
         window.config.generals.site = {
